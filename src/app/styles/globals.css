@@ -1,0 +1,65 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+body {
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
+}
+
+.mouse-circle,
+.mouse-dot {
+	position: absolute;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.mouse-circle {
+	width: 4.8rem;
+	height: 4.8rem;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.mouse-dot {
+	width: 0.8rem;
+	height: 0.8rem;
+	background-color: #fff;
+	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.fadeIn {
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
