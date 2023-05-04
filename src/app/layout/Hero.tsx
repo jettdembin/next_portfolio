@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Hero() {
 	return (
 		<header
 			className="flex items-center justify-center h-screen bg-cover bg-center text-white"
