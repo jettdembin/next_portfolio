@@ -63,3 +63,30 @@ body {
 		opacity: 1;
 	}
 }
+@layer components {
+	.slanted-border-top:before {
+		content: "";
+		position: absolute;
+		top: -5rem;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: inherit;
+		border: 1px solid red;
+		z-index: -1;
+		transform: skewY(2deg);
+		transform-origin: bottom left;
+	}
+	.slanted-border-bottom:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: inherit;
+		z-index: -1;
+		transform: skewY(2deg);
+		transform-origin: top left;
+	}
+}
