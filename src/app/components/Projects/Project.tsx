@@ -14,20 +14,6 @@ export default function Project({
 	source_code_link,
 }) {
 	return (
-		// <div className="relative w-full h-64 bg-gray-100 mb-8">
-		// 	<div className="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 fadeIn">
-		// 		<div className="text-center">
-		// 			<h3 className="mb-2 text-xl font-bold">{title}</h3>
-		// 			<p>{description}</p>
-		// 		</div>
-		// 	</div>
-		// 	<img
-		// 		className="absolute inset-0 w-full h-full object-cover z-0"
-		// 		src={imgSrc}
-		// 		alt={title}
-		// 	/>
-		// </div>
-
 		<Tilt
 			options={{
 				max: 45,
@@ -58,7 +44,15 @@ export default function Project({
 			</div>
 
 			<div className="mt-5">
-				<h3 className="text-white font-bold text-[24px]">{name}</h3>
+				<div className="flex justify-between">
+					<h3 className="text-white font-bold text-[24px]">{name}</h3>
+
+					<div className="flex items-end gap-1">
+						<p>Github</p>
+						<p>Demo</p>
+					</div>
+				</div>
+
 				<p className="mt-2 text-secondary text-[14px]">{description}</p>
 			</div>
 
