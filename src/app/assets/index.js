@@ -14,7 +14,6 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import shopify from "./company/shopify.png";
 
 export {
 	backend,
@@ -32,5 +31,4 @@ export {
 	reactjs,
 	tailwind,
 	typescript,
-	shopify,
 };

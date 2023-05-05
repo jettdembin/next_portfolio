@@ -1,10 +1,10 @@
 export default function About() {
 	return (
 		<section
-			className="relative bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 text-white py-16 slanted-border-top slanted-border-bottom"
+			className="relative bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 text-white py-16 px-10 slanted-border-top slanted-border-bottom"
 			id="about"
 		>
-			<div className="container mx-auto px-4">
+			<div className="container mx-auto">
 				<h1 className="text-4xl font-bold mb-10">About Me</h1>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<div>

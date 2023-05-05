@@ -1,7 +1,7 @@
 export default function Contact() {
 	return (
 		<section
-			className="bg-gradient-to-r from-blue-500 to-purple-300 text-gray-800 py-20"
+			className="bg-gradient-to-r from-blue-500 to-purple-300 text-gray-800 py-20 px-10"
 			id="contact"
 		>
 			<div className="container mx-auto px-4">
