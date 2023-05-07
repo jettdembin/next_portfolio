@@ -8,7 +8,7 @@ export default function Projects() {
 	return (
 		<section className="py-20 px-10" id="projects">
 			<div className="container mx-auto">
-				<h2 className="mb-8 text-4xl font-bold">Projects</h2>
+				<h2 className="mb-8 text-4xl font-bold">Works.</h2>
 
 				<div className="mt-20 sm:flex sm:flex-wrap gap-10 justify-center lg:justify-normal">
 					{projects.map((project, index) => (
