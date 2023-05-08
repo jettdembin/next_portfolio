@@ -15,6 +15,13 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
+import logo from "./logo.png";
+import ucf from "./ucf.png";
+import gemaire from "./gemaire.jpg";
+import eagleview from "./eagleview.png";
+import hs from "./hs.jpg";
+import hero_intro from "./designer.jpg";
+
 export {
 	backend,
 	creator,
@@ -31,4 +38,10 @@ export {
 	reactjs,
 	tailwind,
 	typescript,
+	logo,
+	ucf,
+	gemaire,
+	eagleview,
+	hs,
+	hero_intro,
 };

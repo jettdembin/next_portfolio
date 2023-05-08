@@ -1,3 +1,5 @@
+import { ucf, gemaire, eagleview } from "../assets";
+
 const technologies = [
 	{
 		name: "HTML 5",
@@ -65,8 +67,8 @@ const experiences = [
 	{
 		title: "Student",
 		company_name: "University of Central Florida",
-		icon: "",
-		iconBg: "#383E56",
+		icon: ucf,
+		iconBg: "black",
 		date: "August 2015 - May 2020",
 		points: [
 			"Developing and maintaining web applications using React.js and other related technologies.",
@@ -78,7 +80,7 @@ const experiences = [
 	{
 		title: "Customer Service Representative",
 		company_name: "Eagleview",
-		icon: "",
+		icon: eagleview,
 		iconBg: "#E6DEDD",
 		date: "Jan 2021 - Feb 2022",
 		points: [
@@ -91,7 +93,7 @@ const experiences = [
 	{
 		title: "Frontend Developer / Designer",
 		company_name: "Gemaire LLC",
-		icon: "",
+		icon: gemaire,
 		iconBg: "#383E56",
 		date: "May 2022 - current",
 		points: [

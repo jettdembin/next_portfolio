@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import {
 	VerticalTimeline,
@@ -8,12 +9,12 @@ import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { styles } from "../styles";
+import { styles } from "../styles/styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const JourneyCard = ({ experience }) => {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{
@@ -24,11 +25,12 @@ const ExperienceCard = ({ experience }) => {
 			date={experience.date}
 			iconStyle={{ background: experience.iconBg }}
 			icon={
-				<div className="flex justify-center items-center w-full h-full">
-					<img
+				<div className="flex justify-center items-center w-full h-full rounded-full overflow-hidden">
+					<Image
 						src={experience.icon}
 						alt={experience.company_name}
-						className="w-[60%] h-[60%] object-contain"
+						width={100}
+						className="object-contain"
 					/>
 				</div>
 			}
@@ -57,25 +59,20 @@ const ExperienceCard = ({ experience }) => {
 	);
 };
 
-const Experience = () => {
+const Journey = () => {
 	return (
 		<>
 			<motion.div variants={textVariant()}>
 				<p className={`${styles.sectionSubText} text-center`}>
 					What I have done so far
 				</p>
-				<h2 className={`${styles.sectionHeadText} text-center`}>
-					Work Experience.
-				</h2>
+				<h2 className={`${styles.sectionHeadText} text-center`}>My Journey.</h2>
 			</motion.div>
 
 			<div className="mt-20 flex flex-col">
 				<VerticalTimeline>
 					{experiences.map((experience, index) => (
-						<ExperienceCard
-							key={`experience-${index}`}
-							experience={experience}
-						/>
+						<JourneyCard key={`experience-${index}`} experience={experience} />
 					))}
 				</VerticalTimeline>
 			</div>
@@ -83,4 +80,4 @@ const Experience = () => {
 	);
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Journey, "work");
