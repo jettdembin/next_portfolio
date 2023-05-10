@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 
 import {
@@ -80,4 +81,4 @@ const Journey = () => {
 	);
 };
 
-export default SectionWrapper(Journey, "work");
+export default SectionWrapper(Journey, "experience");
