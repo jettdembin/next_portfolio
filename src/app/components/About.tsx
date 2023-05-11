@@ -14,10 +14,8 @@ const About = () => {
 		// >
 		<>
 			<motion.div variants={textVariant()}>
-				<p className={`${styles.sectionSubText} text-center`}>
-					A little introduction
-				</p>
-				<h2 className={`${styles.sectionHeadText} text-center`}>About.</h2>
+				<p className={`${styles.sectionSubText}`}>Introduction</p>
+				<h2 className={`${styles.sectionHeadText}`}>About.</h2>
 			</motion.div>
 			<div className="container mx-auto mt-32">
 				<p className="text-lg text-center">

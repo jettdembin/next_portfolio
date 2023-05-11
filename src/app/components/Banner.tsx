@@ -5,6 +5,7 @@
 import gsap from "gsap";
 
 export default function Banner() {
+	const handleSeePortfolio = () => {};
 	return (
 		<aside className="banner">
 			<h1 className="intro">{"</JETT>"}</h1>

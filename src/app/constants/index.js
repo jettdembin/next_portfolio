@@ -1,65 +1,79 @@
-import { ucf, gemaire, eagleview } from "../assets";
+import {
+	ucf,
+	gemaire,
+	eagleview,
+	javascript,
+	typescript,
+	html,
+	css,
+	reactjs,
+	tailwind,
+	nodejs,
+	git,
+	figma,
+	threejs,
+} from "../../../public/assets";
 
 const technologies = [
 	{
 		name: "HTML 5",
-		icon: "",
+		icon: "/assets/tech/html.png",
 	},
 	{
 		name: "CSS 3",
-		icon: "",
+		icon: "/assets/tech/css.png",
 	},
 	{
 		name: "SCSS",
-		icon: "",
+		icon: "/assets/tech/css.png",
 	},
 	{
 		name: "JavaScript",
-		icon: "",
+		icon: "/assets/tech/javascript.png",
 	},
 	{
 		name: "TypeScript",
-		icon: "",
+		icon: "/assets/tech/typescript.png",
 	},
 	{
 		name: "React JS",
-		icon: "",
+		icon: "/assets/tech/reactjs.png",
 	},
 	{
 		name: "Next JS",
-		icon: "",
+		icon: "/assets/tech/html.png",
 	},
 	{
 		name: "Tailwind CSS",
-		icon: "",
+		icon: "/assets/tech/tailwind.png",
 	},
 	{
 		name: "Material UI",
-		icon: "",
+		icon: "/assets/tech/html.png",
 	},
 	{
 		name: "Node JS",
-		icon: "",
+		icon: "/assets/tech/nodejs.png",
 	},
 	{
 		name: "Prisma",
-		icon: "",
+		icon: "/assets/tech/html.png",
 	},
 	{
-		name: "Graphql",
-		icon: "",
+		name: "graphql",
+		icon: "/assets/tech/html.png",
 	},
 	{
 		name: "Webpack",
-		icon: "",
+		icon: "/assets/tech/html.png",
 	},
 	{
 		name: "git",
-		icon: "",
+		icon: "/assets/tech/git.png",
 	},
 	{
 		name: "figma",
-		icon: "",
+		icon: "/assets/tech/figma.png",
 	},
 ];
 

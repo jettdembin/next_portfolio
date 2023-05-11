@@ -1,6 +1,6 @@
 "use client";
 
-import { hero_intro } from "../assets/index";
+import { hero_intro } from "../../../public/assets/index";
 import Image from "next/image";
 
 export default function Hero() {

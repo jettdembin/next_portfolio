@@ -11,10 +11,8 @@ const Contact = () => {
 	return (
 		<>
 			<motion.div variants={textVariant()}>
-				<p className={`${styles.sectionSubText} text-center`}>
-					Get in touch and say hello 👋
-				</p>
-				<h2 className={`${styles.sectionHeadText} text-center`}>Connect.</h2>
+				<p className={`${styles.sectionSubText}`}>Say hello 👋</p>
+				<h2 className={`${styles.sectionHeadText}`}>Connect.</h2>
 			</motion.div>
 			<form>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
