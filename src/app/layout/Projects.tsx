@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 import Project from "../components/Projects/Project";
-import Tech from "../components/Tech";
 
 import { projects } from "../constants/index";
 import { SectionWrapper } from "../hoc";
@@ -33,7 +32,6 @@ const Projects = () => {
 					</motion.div>
 				))}
 				{/* </motion.section> */}
-				<Tech />
 			</div>
 		</>
 	);

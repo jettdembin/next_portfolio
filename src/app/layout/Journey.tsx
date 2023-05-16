@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+import Tech from "../components/Tech";
+
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
@@ -75,6 +77,7 @@ const Journey = () => {
 					))}
 				</VerticalTimeline>
 			</div>
+			<Tech />
 		</>
 	);
 };

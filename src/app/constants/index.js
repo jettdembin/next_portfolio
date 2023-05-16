@@ -44,6 +44,10 @@ const technologies = [
 		icon: "/assets/tech/nextjs.png",
 	},
 	{
+		name: "Three JS",
+		icon: "/assets/tech/threejs.svg",
+	},
+	{
 		name: "Tailwind CSS",
 		icon: "/assets/tech/tailwind.png",
 	},

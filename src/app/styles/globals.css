@@ -216,7 +216,7 @@ body {
 	text-align: center;
 }
 .intro-text span {
-	font-size: 1.6rem;
+	font-size: 2.6rem;
 	font-weight: 500;
 	color: #2c2c2c;
 	letter-spacing: 0.5rem;
@@ -233,7 +233,7 @@ body {
 	10%,
 	40% {
 		color: #fff;
-		top: 1.5rem;
+		top: 1.1rem;
 	}
 	70% {
 		color: #aaa;
@@ -241,7 +241,7 @@ body {
 	}
 	90% {
 		color: #fff;
-		top: 1.5rem;
+		top: 1.1rem;
 	}
 	100% {
 		color: #aaa;
