@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 import { motion } from "framer-motion";
 
 import { SectionWrapper } from "../hoc";
@@ -7,24 +9,45 @@ import { styles } from "../styles/styles";
 import { textVariant } from "../utils/motion";
 
 const About = () => {
+	const introTextContent =
+		"Hi, I'm Jett. I'm a self-taught developer that loves to create and design. I look forward to meeting you. :)";
+
+	const introTextRef = useRef();
+
+	useEffect(() => {
+		let ignore;
+		if (ignore) return;
+		if (introTextRef.current == null) return;
+
+		Array.from(introTextContent).forEach((char) => {
+			const span = document.createElement("span");
+			span.textContent = char;
+			introTextRef.current.appendChild(span);
+
+			span.addEventListener("mouseenter", (e) => {
+				e.target.style.animation = "aboutMeTextAnim 10s infinite";
+			});
+		});
+
+		return () => {
+			ignore = true;
+
+			span.removeEventlistener("mouseenter", (e) => {
+				e.target.style.animation = "aboutMeTextAnim 10s infinite";
+			});
+		};
+	}, []);
+
 	return (
-		// <section
-		// 	className="relative bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 text-white py-16 px-10 slanted-border-top slanted-border-bottom"
-		// 	id="about"
-		// >
 		<>
 			<motion.div variants={textVariant()}>
 				<p className={`${styles.sectionSubText}`}>Introduction</p>
 				<h2 className={`${styles.sectionHeadText}`}>About.</h2>
 			</motion.div>
 			<div className="container mx-auto mt-32">
-				<p className="text-lg text-center">
-					Hi, I'm Jett. I'm a self-taught developer that loves to create and
-					design. I look forward to meeting you. :)
-				</p>
+				<p className="text-lg text-center intro-text" ref={introTextRef}></p>
 			</div>
 		</>
-		// </section>
 	);
 };
 

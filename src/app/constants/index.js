@@ -25,7 +25,7 @@ const technologies = [
 	},
 	{
 		name: "SCSS",
-		icon: "/assets/tech/css.png",
+		icon: "/assets/tech/scss.png",
 	},
 	{
 		name: "JavaScript",
@@ -41,7 +41,7 @@ const technologies = [
 	},
 	{
 		name: "Next JS",
-		icon: "/assets/tech/html.png",
+		icon: "/assets/tech/nextjs.png",
 	},
 	{
 		name: "Tailwind CSS",
@@ -49,7 +49,7 @@ const technologies = [
 	},
 	{
 		name: "Material UI",
-		icon: "/assets/tech/html.png",
+		icon: "/assets/tech/mui.png",
 	},
 	{
 		name: "Node JS",
@@ -57,22 +57,22 @@ const technologies = [
 	},
 	{
 		name: "Prisma",
-		icon: "/assets/tech/html.png",
+		icon: "/assets/tech/prisma.png",
 	},
 	{
-		name: "graphql",
-		icon: "/assets/tech/html.png",
+		name: "Graphql",
+		icon: "/assets/tech/graphql.png",
 	},
 	{
 		name: "Webpack",
-		icon: "/assets/tech/html.png",
+		icon: "/assets/tech/webpack.png",
 	},
 	{
 		name: "git",
 		icon: "/assets/tech/git.png",
 	},
 	{
-		name: "figma",
+		name: "Figma",
 		icon: "/assets/tech/figma.png",
 	},
 ];
