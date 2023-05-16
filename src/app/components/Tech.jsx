@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { BallCanvas, TestCanvas } from "./canvas/Ball";
+import { BallCanvas, TestCanvas, TrtCanvas } from "./canvas/Ball";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 
@@ -13,6 +13,7 @@ const Tech = () => {
 				return (
 					<div className="w-28 h-28" key={technology.name}>
 						<BallCanvas icon={technology.icon} />
+						{/* <TrtCanvas /> */}
 					</div>
 				);
 			})}
@@ -20,4 +21,4 @@ const Tech = () => {
 	);
 };
 
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "tech");
