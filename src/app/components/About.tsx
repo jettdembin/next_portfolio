@@ -31,9 +31,6 @@ const About = () => {
 
 		return () => {
 			ignore = true;
-			span.removeEventlistener("mouseenter", (e) => {
-				e.target.style.animation = "aboutMeTextAnim 10s infinite";
-			});
 		};
 	}, []);
 
@@ -45,7 +42,7 @@ const About = () => {
 			</motion.div>
 			<div className="container mx-auto mt-32">
 				<p
-					className="text-lg text-center intro-text transform "
+					className="text-lg text-center intro-text transform"
 					ref={introTextRef}
 				></p>
 			</div>

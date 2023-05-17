@@ -168,30 +168,82 @@ body {
 	z-index: 10;
 }
 
+/* Mouse Circle */
 .mouse-circle,
 .mouse-dot {
-	position: absolute;
-	display: block;
-	transition: all 0.3s ease;
+	position: fixed;
+	/* position: absolute; */
+	border-radius: 50%;
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
 }
-
 .mouse-circle {
-	width: 4.8rem;
-	height: 4.8rem;
-	border: 2px solid #fff;
-	border-radius: 50%;
-	opacity: 0;
-	pointer-events: none;
+	width: 4rem;
+	height: 4rem;
+	background-color: rgb(228, 228, 228);
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
 }
-
 .mouse-dot {
-	width: 0.8rem;
-	height: 0.8rem;
-	background-color: #fff;
-	border-radius: 50%;
-	opacity: 0;
-	pointer-events: none;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #757575;
+	transform-origin: 100% 100%;
+	transition: all 0.6s ease-in-out;
+	transition-property: background, transform, opacity;
 }
+.mouse-dot.mouse-active {
+	transform: scale(2);
+	background: rgb(228, 228, 228);
+	animation: opacity 1s forwards;
+}
+.mouse-dot.mouse-activeproj {
+	transform: scale(2);
+	background-color: #757575;
+	animation: opacityProj 1s forwards;
+}
+.mouse-circle.mouse-active2 {
+	animation: zIndex 0.5s forwards;
+}
+.mouse-active h1 {
+	font-size: 1rem;
+}
+.mouse-dot span {
+	background: transparent;
+	transform: scale(0.4);
+}
+@keyframes opacity {
+	0% {
+		background-color: #757575;
+	}
+	100% {
+		background: #75757548;
+	}
+}
+@keyframes opacityProj {
+	0% {
+		background: #757575;
+	}
+	100% {
+		background: transparent;
+	}
+}
+@keyframes zIndex {
+	0% {
+		z-index: 700;
+	}
+	50% {
+		z-index: 50;
+	}
+	100% {
+		z-index: 20;
+	}
+}
+/* End of Mouse Circle */
 
 /* ============================================================================================================================================================================================================
 										END INTRO

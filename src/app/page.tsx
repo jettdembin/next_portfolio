@@ -17,12 +17,48 @@ import Contact from "./layout/Contact";
 import Footer from "./layout/Footer";
 import Banner from "./components/Banner";
 
-// End of Mouse Circle
-
 export default function Home() {
 	const containerRef = useRef(null);
 	const introButtonRef = useRef(null);
 	const pageWrapperRef = useRef(null);
+
+	//mouse circle
+	const mouseCircleRef = useRef(null);
+	const mouseDotRef = useRef(null);
+	const mouseTextRef = useRef(null);
+
+	const mouseCircleFn = (x, y) => {
+		mouseCircleRef.current.style.cssText = `top: ${y}px; left: ${x}px; opacity: 1`;
+		mouseDotRef.current.style.cssText = `top: ${y}px; left: ${x}px; opacity: 1`;
+	};
+
+	const activeCursor = (e) => {
+		const item = e.target;
+		if (
+			item.classList.contains("pointer-enter") ||
+			item.classList.contains("slick-prev") ||
+			item.classList.contains("slick-next")
+		) {
+			mouseDotRef.current.classList.add("mouse-active");
+			mouseCircleRef.current.classList.add("mouse-active2");
+			mouseTextRef.current.innerHTML = `
+		<h1><i class='fas fa-arrow-right'></i></h1>
+		`;
+			gsap.to(mouseTextRef.current, 0.5, { scale: 1 });
+			gsap.to(mouseTextRef.current, 0.5, { opacity: 1 });
+		} else {
+			gsap.to(mouseTextRef.current, 0.5, { scale: 0.4 });
+			gsap.to(mouseTextRef.current, 0.5, { opacity: 0 });
+			mouseDotRef.current.classList.remove("mouse-active");
+			mouseCircleRef.current.classList.remove("mouse-active2");
+		}
+	};
+	const arrowToggle = (e) => {
+		gsap.to(mouseTextRef.current, 0.5, { scale: 0.4 });
+		gsap.to(mouseTextRef.current, 0.5, { opacity: 0 });
+		mouseDotRef.current.classList.remove("mouse-active");
+		mouseCircleRef.current.classList.remove("mouse-active2");
+	};
 
 	//gsap
 	const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
@@ -49,8 +85,38 @@ export default function Home() {
 		tl.fromTo(".name", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 	};
 
+	useEffect(() => {
+		let ignore;
+		if (ignore) return;
+		if (containerRef.current == null) return;
+
+		const handleMouseMove = (e) => {
+			let x = e.clientX;
+			let y = e.clientY;
+
+			mouseCircleFn(x, y);
+			activeCursor(e);
+		};
+
+		const hanldeMouseLeave = (e) => {
+			mouseCircleRef.current.style.opacity = "0";
+			mouseDotRef.current.style.opacity = "0";
+		};
+
+		containerRef.current.addEventListener("mousemove", handleMouseMove);
+		containerRef.current.addEventListener("mouseleave", hanldeMouseLeave);
+
+		return () => {
+			ignore = true;
+		};
+	}, [containerRef.current]);
+
 	return (
 		<div className="app" ref={containerRef}>
+			<div className="mouse-circle place-above" ref={mouseCircleRef}></div>
+			<div className="mouse-dot place-above" ref={mouseDotRef}>
+				<span ref={mouseTextRef}></span>
+			</div>
 			<aside className="banner">
 				<h1 className="intro">{"</JETT>"}</h1>
 				<button
@@ -72,29 +138,7 @@ export default function Home() {
 				</main>
 				<Footer />
 			</div>
-			<div
-				className={`socials-cntr before:absolute before:content-[""] before:border before:border-solid before:border-white before:h-32 before:left-1/2 before:bottom before:-translate-x-1/2`}
-				style={{ position: "fixed", bottom: "0", left: "1.5rem" }}
-			>
-				<div className="socials w-9 flex flex-col relative -top-20">
-					<a href="https://www.linkedin.com/in/jettdembin/" target="_blank">
-						<img
-							className="social-img filter pb-1"
-							id="bit"
-							src="/assets/socials/linkedin.svg"
-							alt="LinkedIn"
-						/>
-					</a>
-					<a href="https://www.github.com/jettdembin" target="_blank">
-						<img
-							className="social-img"
-							id="github"
-							src="/assets/github.png"
-							alt="GitHub"
-						/>
-					</a>
-				</div>
-			</div>
+
 			<div className="slider"></div>
 		</div>
 	);
