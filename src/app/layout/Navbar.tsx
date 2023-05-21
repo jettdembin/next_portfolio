@@ -7,7 +7,9 @@ import { fadeIn } from "../utils/motion";
 
 export default function Navbar() {
 	const [isNavShowing, setIsNavShowing] = useState(true);
+	const [isMenuShowing, setIsMenuShowing] = useState(false);
 
+	//listen for scroll up or scroll down to animate nav
 	useEffect(() => {
 		let prevScrollPos = window.pageYOffset;
 
@@ -16,8 +18,12 @@ export default function Navbar() {
 
 			if (prevScrollPos > currentScrollPos) {
 				setIsNavShowing(true); // Scroll up
+
+				setIsMenuShowing(false);
 			} else {
 				setIsNavShowing(false); // Scroll down
+
+				setIsMenuShowing(true);
 			}
 
 			prevScrollPos = currentScrollPos;
@@ -35,6 +41,7 @@ export default function Navbar() {
 			<div className="text-white font-bold border border-solid border-white">
 				<h2>{`</Jett>`}</h2>
 			</div>
+
 			<motion.ul
 				className="flex space-x-8"
 				initial="show"
@@ -46,6 +53,25 @@ export default function Navbar() {
 				<li className="text-white">About</li>
 				<li className="text-white">Contact</li>
 			</motion.ul>
+
+			<>
+				<div
+					className={`menu-icon w-8 h-5 flex flex-col items-center justify-around  ${
+						isMenuShowing ? "show-menu-icon" : ""
+					}`}
+					onClick={() => {
+						setIsMenuShowing(false);
+						setIsNavShowing(true);
+					}}
+				>
+					<div className="menu-icon-line"></div>
+					<div className="menu-icon-line"></div>
+				</div>
+			</>
 		</nav>
 	);
+}
+
+{
+	/* ${isMenuShowing ? "show-menu-icon" : ""} */
 }

@@ -31,6 +31,39 @@ body {
 		brightness(102%) contrast(103%);
 }
 
+/* START Menu Icon */
+.menu-icon {
+	position: fixed;
+	right: 0.5rem;
+	top: 2rem;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 100;
+	transform: translate(-50%, -50%);
+	transition: opacity 2s;
+	/* position: fixed;
+	top: 4rem;
+	right: 0;
+	width: 1.5rem;
+	height: 7rem;
+	flex-direction: column;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 100;
+	transform: translate(-50%, -50%);
+	transition: opacity 2s; */
+}
+.menu-icon-line {
+	width: 2rem;
+	height: 0.1rem;
+	background-color: #fff;
+	box-shadow: 0 0.3rem 0.5rem #000;
+}
+.show-menu-icon {
+	opacity: 1;
+	visibility: visible;
+}
+/* End Menu Icon */
 /* ============================================================================================================================================================================================================
 										START INTRO
 ============================================================================================================================================================================================================
