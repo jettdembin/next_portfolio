@@ -36,6 +36,21 @@ export default function Navbar() {
 		};
 	}, []);
 
+	const menuIcon = (
+		<div
+			className={`menu-icon w-8 h-5 flex flex-col items-center justify-around  ${
+				isMenuShowing ? "show-menu-icon" : ""
+			}`}
+			onClick={() => {
+				setIsMenuShowing(false);
+				setIsNavShowing(true);
+			}}
+		>
+			<div className="menu-icon-line"></div>
+			<div className="menu-icon-line"></div>
+		</div>
+	);
+
 	return (
 		<nav className="fixed w-full flex items-center justify-between px-8 py-4 bg-gradient-to-r">
 			<div className="text-white font-bold border border-solid border-white">
@@ -54,20 +69,7 @@ export default function Navbar() {
 				<li className="text-white">Contact</li>
 			</motion.ul>
 
-			<>
-				<div
-					className={`menu-icon w-8 h-5 flex flex-col items-center justify-around  ${
-						isMenuShowing ? "show-menu-icon" : ""
-					}`}
-					onClick={() => {
-						setIsMenuShowing(false);
-						setIsNavShowing(true);
-					}}
-				>
-					<div className="menu-icon-line"></div>
-					<div className="menu-icon-line"></div>
-				</div>
-			</>
+			{menuIcon}
 		</nav>
 	);
 }
