@@ -15,6 +15,7 @@ import Journey from "./layout/Journey";
 import Projects from "./layout/Projects";
 import Contact from "./layout/Contact";
 import Footer from "./layout/Footer";
+import Socials from "./components/Socials";
 import Banner from "./components/Banner";
 
 export default function Home() {
@@ -138,6 +139,7 @@ export default function Home() {
 				</main>
 				<Footer />
 			</div>
+			<Socials />
 
 			<div className="slider"></div>
 		</div>
