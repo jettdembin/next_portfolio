@@ -1,9 +1,5 @@
 "use client";
 
-"use client";
-
-import gsap from "gsap";
-
 export default function Banner() {
 	const handleSeePortfolio = () => {};
 	return (

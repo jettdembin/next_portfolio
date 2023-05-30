@@ -110,15 +110,15 @@ body {
 }
 .banner h1 {
 	font-family: "Ubuntu", sans-serif;
-	font-size: 13.5rem;
+	font-size: 7.5rem;
 	color: #fff;
 	border-top: 5px solid #fff;
 	border-bottom: 5px solid #fff;
 	margin-bottom: 100px;
 }
 .banner button {
-	width: 23rem;
-	padding: 0.5em 1em;
+	width: 13rem;
+	padding: 0.5rem 1rem;
 	background: #12c2e9; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		45deg,
@@ -133,7 +133,7 @@ body {
 		rgba(246, 79, 89, 1) 100%
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	font-family: "Dosis", sans-serif;
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 	color: #fff;
 	letter-spacing: 0.2rem;
 	border-radius: 100px;
