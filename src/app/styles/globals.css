@@ -18,12 +18,13 @@
 
 body {
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(
+	background: #000;
+	/* background: linear-gradient(
 			to bottom,
 			transparent,
 			rgb(var(--background-end-rgb))
 		)
-		rgb(var(--background-start-rgb));
+		rgb(var(--background-start-rgb)); */
 }
 
 .filter {
@@ -144,7 +145,7 @@ body {
 	animation: buttonAnim 1s 2.5s backwards;
 	transition: all 0.5s;
 	overflow: hidden;
-	cursor: none;
+	/* cursor: none; */
 }
 @keyframes buttonAnim {
 	0% {
@@ -201,54 +202,7 @@ body {
 	z-index: 10;
 }
 
-/* Mouse Circle */
-.mouse-circle,
-.mouse-dot {
-	position: fixed;
-	/* position: absolute; */
-	border-radius: 50%;
-	opacity: 1;
-	transform: translate(-50%, -50%);
-	pointer-events: none;
-}
-.mouse-circle {
-	width: 4rem;
-	height: 4rem;
-	background-color: rgb(228, 228, 228);
-	transition-duration: 100ms;
-	transition-timing-function: ease-out;
-}
-.mouse-dot {
-	width: 2rem;
-	height: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #757575;
-	transform-origin: 100% 100%;
-	transition: all 0.6s ease-in-out;
-	transition-property: background, transform, opacity;
-}
-.mouse-dot.mouse-active {
-	transform: scale(2);
-	background: rgb(228, 228, 228);
-	animation: opacity 1s forwards;
-}
-.mouse-dot.mouse-activeproj {
-	transform: scale(2);
-	background-color: #757575;
-	animation: opacityProj 1s forwards;
-}
-.mouse-circle.mouse-active2 {
-	animation: zIndex 0.5s forwards;
-}
-.mouse-active h1 {
-	font-size: 1rem;
-}
-.mouse-dot span {
-	background: transparent;
-	transform: scale(0.4);
-}
+
 @keyframes opacity {
 	0% {
 		background-color: #757575;
